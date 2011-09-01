@@ -1,0 +1,25 @@
+# User Specific Files
+*.user
+*.usr
+*.suo
+*.cache
+*.publish.xml
+
+# Binary / Compiled / Data Files
+Design
+App_Config
+_bin_deployableAssemblies
+bin
+obj
+debug
+release
+App_Data
+*.mdf
+*.ldf
+
+# OS generated files #
+######################
+.DS_Store?
+thumbs.db
+Icon?
+Thumbs.db
