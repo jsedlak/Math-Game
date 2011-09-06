@@ -1,7 +1,7 @@
-# Math Game README
-Copyright (C)2011 John Sedlak
+h1. Math Game README
+p. Copyright (C)2011 John Sedlak
 
-## Software Requirements
+h2. Software Requirements
 
 * Microsoft .NET 2.0 Runtime (See: http://www.microsoft.com/downloads/details.aspx?familyid=0856eacb-4362-4b0d-8edd-aab15c5e04f5&displaylang=en)
 * Microsoft Windows XP, Service Pack 2 or greater.
