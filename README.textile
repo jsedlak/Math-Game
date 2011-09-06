@@ -1,4 +1,5 @@
 h1. Math Game README
+
 p. Copyright (C)2011 John Sedlak
 
 h2. Software Requirements
