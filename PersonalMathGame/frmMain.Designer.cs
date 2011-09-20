@@ -31,11 +31,23 @@ namespace MathGame
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewGame = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSaveAs = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.directionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuObjective = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuHowTo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuOrder = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSpecial = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuHints = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSound = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAboutMathGame = new System.Windows.Forms.ToolStripMenuItem();
             this.txtEquation = new System.Windows.Forms.TextBox();
             this.btnNum0 = new System.Windows.Forms.Button();
             this.btnNum1 = new System.Windows.Forms.Button();
@@ -60,18 +72,7 @@ namespace MathGame
             this.btnBest = new System.Windows.Forms.Button();
             this.btnCanI = new System.Windows.Forms.Button();
             this.btnCompare = new System.Windows.Forms.Button();
-            this.mnuNewGame = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSaveAs = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuQuit = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuObjective = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuHowTo = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuOrder = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSpecial = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuHints = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSound = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAboutMathGame = new System.Windows.Forms.ToolStripMenuItem();
+            this.destinationLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,15 +104,61 @@ namespace MathGame
             this.mnuFile.Size = new System.Drawing.Size(37, 20);
             this.mnuFile.Text = "&File";
             // 
+            // mnuNewGame
+            // 
+            this.mnuNewGame.Image = ((System.Drawing.Image)(resources.GetObject("mnuNewGame.Image")));
+            this.mnuNewGame.Name = "mnuNewGame";
+            this.mnuNewGame.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.mnuNewGame.Size = new System.Drawing.Size(186, 22);
+            this.mnuNewGame.Text = "&New Game";
+            this.mnuNewGame.Click += new System.EventHandler(this.mnuNewGame_Click);
+            // 
+            // mnuOpen
+            // 
+            this.mnuOpen.Image = global::MathGame.Properties.Resources.open;
+            this.mnuOpen.Name = "mnuOpen";
+            this.mnuOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.mnuOpen.Size = new System.Drawing.Size(186, 22);
+            this.mnuOpen.Text = "&Open Game";
+            this.mnuOpen.Click += new System.EventHandler(this.mnuOpen_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(183, 6);
             // 
+            // mnuSave
+            // 
+            this.mnuSave.Image = global::MathGame.Properties.Resources.save;
+            this.mnuSave.Name = "mnuSave";
+            this.mnuSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.mnuSave.Size = new System.Drawing.Size(186, 22);
+            this.mnuSave.Text = "&Save";
+            this.mnuSave.Click += new System.EventHandler(this.mnuSave_Click);
+            // 
+            // mnuSaveAs
+            // 
+            this.mnuSaveAs.Image = global::MathGame.Properties.Resources.save_as;
+            this.mnuSaveAs.Name = "mnuSaveAs";
+            this.mnuSaveAs.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.mnuSaveAs.Size = new System.Drawing.Size(186, 22);
+            this.mnuSaveAs.Text = "Save &As";
+            this.mnuSaveAs.Click += new System.EventHandler(this.mnuSaveAs_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(183, 6);
+            // 
+            // mnuQuit
+            // 
+            this.mnuQuit.Image = global::MathGame.Properties.Resources.close;
+            this.mnuQuit.Name = "mnuQuit";
+            this.mnuQuit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.mnuQuit.Size = new System.Drawing.Size(186, 22);
+            this.mnuQuit.Text = "&Quit";
+            this.mnuQuit.Click += new System.EventHandler(this.mnuQuit_Click);
             // 
             // directionsToolStripMenuItem
             // 
@@ -125,6 +172,46 @@ namespace MathGame
             this.directionsToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.directionsToolStripMenuItem.Text = "&Directions";
             // 
+            // mnuObjective
+            // 
+            this.mnuObjective.Image = global::MathGame.Properties.Resources.directions;
+            this.mnuObjective.Name = "mnuObjective";
+            this.mnuObjective.Size = new System.Drawing.Size(181, 22);
+            this.mnuObjective.Text = "Objective";
+            this.mnuObjective.Click += new System.EventHandler(this.objectiveToolStripMenuItem_Click);
+            // 
+            // mnuHowTo
+            // 
+            this.mnuHowTo.Image = global::MathGame.Properties.Resources.howtomove;
+            this.mnuHowTo.Name = "mnuHowTo";
+            this.mnuHowTo.Size = new System.Drawing.Size(181, 22);
+            this.mnuHowTo.Text = "How To Move";
+            this.mnuHowTo.Click += new System.EventHandler(this.howToMoveToolStripMenuItem_Click);
+            // 
+            // mnuOrder
+            // 
+            this.mnuOrder.Image = global::MathGame.Properties.Resources.operations;
+            this.mnuOrder.Name = "mnuOrder";
+            this.mnuOrder.Size = new System.Drawing.Size(181, 22);
+            this.mnuOrder.Text = "Order Of Operations";
+            this.mnuOrder.Click += new System.EventHandler(this.mnuOrder_Click);
+            // 
+            // mnuSpecial
+            // 
+            this.mnuSpecial.Image = global::MathGame.Properties.Resources.directions;
+            this.mnuSpecial.Name = "mnuSpecial";
+            this.mnuSpecial.Size = new System.Drawing.Size(181, 22);
+            this.mnuSpecial.Text = "Special Moves";
+            this.mnuSpecial.Click += new System.EventHandler(this.mnuSpecial_Click);
+            // 
+            // mnuHints
+            // 
+            this.mnuHints.Image = global::MathGame.Properties.Resources.directions;
+            this.mnuHints.Name = "mnuHints";
+            this.mnuHints.Size = new System.Drawing.Size(181, 22);
+            this.mnuHints.Text = "Hints";
+            this.mnuHints.Click += new System.EventHandler(this.mnuHints_Click);
+            // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -133,6 +220,17 @@ namespace MathGame
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
+            // mnuSound
+            // 
+            this.mnuSound.Checked = true;
+            this.mnuSound.CheckOnClick = true;
+            this.mnuSound.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mnuSound.Image = global::MathGame.Properties.Resources.sound;
+            this.mnuSound.Name = "mnuSound";
+            this.mnuSound.Size = new System.Drawing.Size(108, 22);
+            this.mnuSound.Text = "Sound";
+            this.mnuSound.Click += new System.EventHandler(this.mnuSound_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -140,6 +238,14 @@ namespace MathGame
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "&About";
+            // 
+            // mnuAboutMathGame
+            // 
+            this.mnuAboutMathGame.Image = ((System.Drawing.Image)(resources.GetObject("mnuAboutMathGame.Image")));
+            this.mnuAboutMathGame.Name = "mnuAboutMathGame";
+            this.mnuAboutMathGame.Size = new System.Drawing.Size(172, 22);
+            this.mnuAboutMathGame.Text = "About Math Game";
+            this.mnuAboutMathGame.Click += new System.EventHandler(this.mnuAboutMathGame_Click);
             // 
             // txtEquation
             // 
@@ -401,116 +507,22 @@ namespace MathGame
             this.btnCompare.UseVisualStyleBackColor = true;
             this.btnCompare.Click += new System.EventHandler(this.btnCompare_Click);
             // 
-            // mnuNewGame
+            // destinationLabel
             // 
-            this.mnuNewGame.Image = ((System.Drawing.Image)(resources.GetObject("mnuNewGame.Image")));
-            this.mnuNewGame.Name = "mnuNewGame";
-            this.mnuNewGame.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.mnuNewGame.Size = new System.Drawing.Size(186, 22);
-            this.mnuNewGame.Text = "&New Game";
-            this.mnuNewGame.Click += new System.EventHandler(this.mnuNewGame_Click);
-            // 
-            // mnuOpen
-            // 
-            this.mnuOpen.Image = global::MathGame.Properties.Resources.open;
-            this.mnuOpen.Name = "mnuOpen";
-            this.mnuOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.mnuOpen.Size = new System.Drawing.Size(186, 22);
-            this.mnuOpen.Text = "&Open Game";
-            this.mnuOpen.Click += new System.EventHandler(this.mnuOpen_Click);
-            // 
-            // mnuSave
-            // 
-            this.mnuSave.Image = global::MathGame.Properties.Resources.save;
-            this.mnuSave.Name = "mnuSave";
-            this.mnuSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.mnuSave.Size = new System.Drawing.Size(186, 22);
-            this.mnuSave.Text = "&Save";
-            this.mnuSave.Click += new System.EventHandler(this.mnuSave_Click);
-            // 
-            // mnuSaveAs
-            // 
-            this.mnuSaveAs.Image = global::MathGame.Properties.Resources.save_as;
-            this.mnuSaveAs.Name = "mnuSaveAs";
-            this.mnuSaveAs.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.S)));
-            this.mnuSaveAs.Size = new System.Drawing.Size(186, 22);
-            this.mnuSaveAs.Text = "Save &As";
-            this.mnuSaveAs.Click += new System.EventHandler(this.mnuSaveAs_Click);
-            // 
-            // mnuQuit
-            // 
-            this.mnuQuit.Image = global::MathGame.Properties.Resources.close;
-            this.mnuQuit.Name = "mnuQuit";
-            this.mnuQuit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.mnuQuit.Size = new System.Drawing.Size(186, 22);
-            this.mnuQuit.Text = "&Quit";
-            this.mnuQuit.Click += new System.EventHandler(this.mnuQuit_Click);
-            // 
-            // mnuObjective
-            // 
-            this.mnuObjective.Image = global::MathGame.Properties.Resources.directions;
-            this.mnuObjective.Name = "mnuObjective";
-            this.mnuObjective.Size = new System.Drawing.Size(181, 22);
-            this.mnuObjective.Text = "Objective";
-            this.mnuObjective.Click += new System.EventHandler(this.objectiveToolStripMenuItem_Click);
-            // 
-            // mnuHowTo
-            // 
-            this.mnuHowTo.Image = global::MathGame.Properties.Resources.howtomove;
-            this.mnuHowTo.Name = "mnuHowTo";
-            this.mnuHowTo.Size = new System.Drawing.Size(181, 22);
-            this.mnuHowTo.Text = "How To Move";
-            this.mnuHowTo.Click += new System.EventHandler(this.howToMoveToolStripMenuItem_Click);
-            // 
-            // mnuOrder
-            // 
-            this.mnuOrder.Image = global::MathGame.Properties.Resources.operations;
-            this.mnuOrder.Name = "mnuOrder";
-            this.mnuOrder.Size = new System.Drawing.Size(181, 22);
-            this.mnuOrder.Text = "Order Of Operations";
-            this.mnuOrder.Click += new System.EventHandler(this.mnuOrder_Click);
-            // 
-            // mnuSpecial
-            // 
-            this.mnuSpecial.Image = global::MathGame.Properties.Resources.directions;
-            this.mnuSpecial.Name = "mnuSpecial";
-            this.mnuSpecial.Size = new System.Drawing.Size(181, 22);
-            this.mnuSpecial.Text = "Special Moves";
-            this.mnuSpecial.Click += new System.EventHandler(this.mnuSpecial_Click);
-            // 
-            // mnuHints
-            // 
-            this.mnuHints.Image = global::MathGame.Properties.Resources.directions;
-            this.mnuHints.Name = "mnuHints";
-            this.mnuHints.Size = new System.Drawing.Size(181, 22);
-            this.mnuHints.Text = "Hints";
-            this.mnuHints.Click += new System.EventHandler(this.mnuHints_Click);
-            // 
-            // mnuSound
-            // 
-            this.mnuSound.Checked = true;
-            this.mnuSound.CheckOnClick = true;
-            this.mnuSound.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.mnuSound.Image = global::MathGame.Properties.Resources.sound;
-            this.mnuSound.Name = "mnuSound";
-            this.mnuSound.Size = new System.Drawing.Size(108, 22);
-            this.mnuSound.Text = "Sound";
-            this.mnuSound.Click += new System.EventHandler(this.mnuSound_Click);
-            // 
-            // mnuAboutMathGame
-            // 
-            this.mnuAboutMathGame.Image = ((System.Drawing.Image)(resources.GetObject("mnuAboutMathGame.Image")));
-            this.mnuAboutMathGame.Name = "mnuAboutMathGame";
-            this.mnuAboutMathGame.Size = new System.Drawing.Size(172, 22);
-            this.mnuAboutMathGame.Text = "About Math Game";
-            this.mnuAboutMathGame.Click += new System.EventHandler(this.mnuAboutMathGame_Click);
+            this.destinationLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.destinationLabel.Location = new System.Drawing.Point(21, 529);
+            this.destinationLabel.Name = "destinationLabel";
+            this.destinationLabel.Size = new System.Drawing.Size(100, 23);
+            this.destinationLabel.TabIndex = 25;
+            this.destinationLabel.Text = "DESTINATION";
+            this.destinationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 569);
+            this.Controls.Add(this.destinationLabel);
             this.Controls.Add(this.btnCompare);
             this.Controls.Add(this.btnCanI);
             this.Controls.Add(this.btnBest);
@@ -595,6 +607,7 @@ namespace MathGame
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnuSound;
+        private System.Windows.Forms.Label destinationLabel;
     }
 }
 

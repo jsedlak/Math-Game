@@ -173,6 +173,7 @@ namespace MathGame
             
             newGame.PlayerTwoName = m_p2Name;
             newGame.PlayerOneName = m_p1Name;
+            newGame.DestinationName = destinationLabel.Text;
 
             DialogResult _result;
             do
@@ -201,6 +202,8 @@ namespace MathGame
 
             // Set if the game is single player or not.
             m_spGame = newGame.SinglePlayerGame;
+
+            destinationLabel.Text = newGame.DestinationName;
 
             // Set the style.
             SetStyle(Styles.StartGame);

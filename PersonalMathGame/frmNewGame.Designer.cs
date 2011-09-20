@@ -33,10 +33,12 @@ namespace MathGame
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.PlayerOneNameLabel = new System.Windows.Forms.Label();
-            this.PlayerOneNameTextBox = new System.Windows.Forms.TextBox();
             this.PlayerTwoNameTextBox = new System.Windows.Forms.TextBox();
             this.PlayerTwoNameLabel = new System.Windows.Forms.Label();
+            this.PlayerOneNameTextBox = new System.Windows.Forms.TextBox();
+            this.PlayerOneNameLabel = new System.Windows.Forms.Label();
+            this.DestinationBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +46,7 @@ namespace MathGame
             // 
             this.btnSingle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSingle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSingle.Location = new System.Drawing.Point(44, 170);
+            this.btnSingle.Location = new System.Drawing.Point(44, 214);
             this.btnSingle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSingle.Name = "btnSingle";
             this.btnSingle.Size = new System.Drawing.Size(159, 34);
@@ -57,7 +59,7 @@ namespace MathGame
             // 
             this.btnMulti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMulti.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMulti.Location = new System.Drawing.Point(210, 170);
+            this.btnMulti.Location = new System.Drawing.Point(210, 214);
             this.btnMulti.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMulti.Name = "btnMulti";
             this.btnMulti.Size = new System.Drawing.Size(118, 34);
@@ -81,7 +83,7 @@ namespace MathGame
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnExit.Location = new System.Drawing.Point(340, 170);
+            this.btnExit.Location = new System.Drawing.Point(340, 214);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(97, 34);
@@ -92,40 +94,24 @@ namespace MathGame
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.DestinationBox);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.PlayerTwoNameTextBox);
             this.groupBox1.Controls.Add(this.PlayerTwoNameLabel);
             this.groupBox1.Controls.Add(this.PlayerOneNameTextBox);
             this.groupBox1.Controls.Add(this.PlayerOneNameLabel);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 71);
+            this.groupBox1.Location = new System.Drawing.Point(12, 74);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(425, 87);
+            this.groupBox1.Size = new System.Drawing.Size(425, 120);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player Information";
-            // 
-            // PlayerOneNameLabel
-            // 
-            this.PlayerOneNameLabel.Location = new System.Drawing.Point(7, 26);
-            this.PlayerOneNameLabel.Name = "PlayerOneNameLabel";
-            this.PlayerOneNameLabel.Size = new System.Drawing.Size(117, 19);
-            this.PlayerOneNameLabel.TabIndex = 2;
-            this.PlayerOneNameLabel.Text = "Player One Name:";
-            // 
-            // PlayerOneNameTextBox
-            // 
-            this.PlayerOneNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PlayerOneNameTextBox.Location = new System.Drawing.Point(131, 22);
-            this.PlayerOneNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PlayerOneNameTextBox.Name = "PlayerOneNameTextBox";
-            this.PlayerOneNameTextBox.Size = new System.Drawing.Size(287, 23);
-            this.PlayerOneNameTextBox.TabIndex = 0;
-            this.PlayerOneNameTextBox.TextChanged += new System.EventHandler(this.PlayerOneNameTextBox_TextChanged);
             // 
             // PlayerTwoNameTextBox
             // 
@@ -146,11 +132,49 @@ namespace MathGame
             this.PlayerTwoNameLabel.TabIndex = 3;
             this.PlayerTwoNameLabel.Text = "Player Two Name:";
             // 
+            // PlayerOneNameTextBox
+            // 
+            this.PlayerOneNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PlayerOneNameTextBox.Location = new System.Drawing.Point(131, 22);
+            this.PlayerOneNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PlayerOneNameTextBox.Name = "PlayerOneNameTextBox";
+            this.PlayerOneNameTextBox.Size = new System.Drawing.Size(287, 23);
+            this.PlayerOneNameTextBox.TabIndex = 0;
+            this.PlayerOneNameTextBox.TextChanged += new System.EventHandler(this.PlayerOneNameTextBox_TextChanged);
+            // 
+            // PlayerOneNameLabel
+            // 
+            this.PlayerOneNameLabel.Location = new System.Drawing.Point(7, 26);
+            this.PlayerOneNameLabel.Name = "PlayerOneNameLabel";
+            this.PlayerOneNameLabel.Size = new System.Drawing.Size(117, 19);
+            this.PlayerOneNameLabel.TabIndex = 2;
+            this.PlayerOneNameLabel.Text = "Player One Name:";
+            // 
+            // DestinationBox
+            // 
+            this.DestinationBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DestinationBox.Location = new System.Drawing.Point(131, 83);
+            this.DestinationBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DestinationBox.Name = "DestinationBox";
+            this.DestinationBox.Size = new System.Drawing.Size(287, 23);
+            this.DestinationBox.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 19);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Destination:";
+            // 
             // frmNewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 214);
+            this.ClientSize = new System.Drawing.Size(449, 258);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
@@ -181,5 +205,7 @@ namespace MathGame
         private System.Windows.Forms.Label PlayerTwoNameLabel;
         private System.Windows.Forms.TextBox PlayerOneNameTextBox;
         private System.Windows.Forms.Label PlayerOneNameLabel;
+        private System.Windows.Forms.TextBox DestinationBox;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -37,6 +37,12 @@ namespace MathGame
             }
         }
 
+        public string DestinationName
+        {
+            get { return DestinationBox.Text; }
+            set { DestinationBox.Text = value; }
+        }
+
         public string PlayerOneName
         {
             get { return string.IsNullOrEmpty(PlayerOneNameTextBox.Text) ? "Player One" : PlayerOneNameTextBox.Text; }
