@@ -240,12 +240,12 @@ namespace MathGame
             #endregion
 
             #region Draw Lines
-            g.DrawLine(m_pen, new Point(20, 60), new Point(633, 60));
+            /*g.DrawLine(m_pen, new Point(20, 60), new Point(633, 60));
             g.DrawLine(m_pen, new Point(60, 140), new Point(633, 140));
             g.DrawLine(m_pen, new Point(60, 220), new Point(633, 220));
             g.DrawLine(m_pen, new Point(60, 300), new Point(633, 300));
             g.DrawLine(m_pen, new Point(60, 380), new Point(633, 380));
-            g.DrawLine(m_pen, new Point(60, 460), new Point(633, 460));
+            g.DrawLine(m_pen, new Point(60, 460), new Point(633, 460));*/
             #endregion
 
             #region Draw Player Two

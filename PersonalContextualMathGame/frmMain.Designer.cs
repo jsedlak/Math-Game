@@ -408,11 +408,10 @@ namespace MathGame
             // 
             this.destinationLabel.BackColor = System.Drawing.Color.Transparent;
             this.destinationLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.destinationLabel.Location = new System.Drawing.Point(21, 529);
+            this.destinationLabel.Location = new System.Drawing.Point(40, 570);
             this.destinationLabel.Name = "destinationLabel";
             this.destinationLabel.Size = new System.Drawing.Size(100, 23);
             this.destinationLabel.TabIndex = 25;
-            this.destinationLabel.Text = "DESTINATION";
             this.destinationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mnuNewGame
@@ -534,7 +533,7 @@ namespace MathGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 579);
+            this.ClientSize = new System.Drawing.Size(674, 589);
             this.Controls.Add(this.destinationLabel);
             this.Controls.Add(this.btnCompare);
             this.Controls.Add(this.btnCanI);
@@ -564,8 +563,8 @@ namespace MathGame
             this.Controls.Add(this.BackgroundPicture);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(690, 614);
-            this.MinimumSize = new System.Drawing.Size(690, 614);
+            this.MaximumSize = new System.Drawing.Size(690, 624);
+            this.MinimumSize = new System.Drawing.Size(690, 624);
             this.Name = "frmMain";
             this.Text = "Math Game";
             this.Load += new System.EventHandler(this.frmMain_Load);
