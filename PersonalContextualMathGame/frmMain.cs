@@ -223,8 +223,9 @@ namespace MathGame
         protected void OnPaintGraphics(object sender, PaintEventArgs e)
         {
             base.OnPaint(e);
-
+            
             Graphics g = e.Graphics;
+            //g.Clear(Color.White);
 
             #region Draw Box
             /*g.DrawLine(m_pen, 13, 84, 664, 84);
@@ -335,8 +336,6 @@ namespace MathGame
             if (btnNextTurn.Text.Equals("Start Game"))
             {
                 btnNextTurn.Text = "Next Turn";
-
-                
 
                 SetStyle(Styles.NextTurn);
                 NextTurn();
@@ -534,6 +533,9 @@ namespace MathGame
                 // Invalidate the form so it repaints.
                 this.Invalidate();
             }
+
+            this.Invalidate(true);
+            Application.DoEvents();
         }
 
         private void NextTurn()
